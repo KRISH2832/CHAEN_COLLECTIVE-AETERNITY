@@ -5256,7 +5256,7 @@ a.close.disabled {
 .modal-dialog-scrollable .modal-header {
   flex-shrink: 0;
 }
-.modal-dialog-scrollable .modal-body {
+.modal-dialog-scrollable .class="modal-body"" {
   overflow-y: auto;
 }
 .modal-dialog-centered {
@@ -5327,7 +5327,7 @@ a.close.disabled {
   margin-bottom: 0;
   line-height: 1.5;
 }
-.modal-body {
+.class="modal-body"" {
   position: relative;
   flex: 1 1 auto;
   padding: 1rem;
