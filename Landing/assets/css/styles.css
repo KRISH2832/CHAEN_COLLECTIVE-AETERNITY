@@ -245,6 +245,11 @@ img {
 
 .home__header {
   position: relative;
+    width: 100%; /* Ensure it spans the full width of its container */
+    text-align: center; /* Center the text horizontally */
+    left: 70%; /* Position the left edge of the element in the middle of the container */
+    transform: translate(-50%, -50%); /* Adjust the position to center the element exactly */
+
 }
 
 .home__title {
@@ -268,10 +273,12 @@ img {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1);
+  margin-left: var(--mb-1-5);
 }
 
 .home__description {
   margin-bottom: var(--mb-2-5);
+  margin-left: var(--mb-1-5);
   line-height: var(--text-line-height);
 }
 
