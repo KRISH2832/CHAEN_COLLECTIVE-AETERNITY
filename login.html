@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CHÆN COLLECTIVE</title>
+
+    <!-- Custom fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0b0f !important;
+        }
+
+        .centered-blur-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('/img/rose-bg.png');
+            background-size: cover;
+            width: 600px;
+            height: 600px;
+            filter: blur(60px);
+            z-index: -1;
+        }
+
+        .centered-login {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .card {
+            background-color: transparent;
+            border: none;
+        }
+
+        .form-control-user {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-blur-bg"></div>
+
+    <div class="centered-login">
+        <div class="p-5">
+            <div class="text-center">
+                <h1 class="h4 text-gray-200 mb-4">Login to CHÆN COLLECTIVE</h1>
+            </div>
+            <form class="user">
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="pvKeyValue" aria-describedby="emailHelp" placeholder="Enter your seed code">
+                    <input type="password" class="form-control form-control-user" id="pvKeyNewPasswordValue" aria-describedby="emailHelp" placeholder="Enter a new password">
+                </div>
+                <a id="generateWalletPrivKeyButton" class="btn btn-primary btn-user btn-block">Login with your private key</a>
+                <p class="invalid-feedback" id="errorLogin"></p>
+            </form>
+            <hr>
+            <div class="text-center">
+                <a class="small" color="#808080" href="register.html">Create an Account!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        var isAuthenticated = localStorage.getItem('aeWalletAddress');
+        if(isAuthenticated != null) {
+            location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

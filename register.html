@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CHÆN COLLECTIVE</title>
+
+    <!-- Custom fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0b0f !important;
+        }
+
+        .centered-blur-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('/img/rose-bg.png');
+            background-size: cover;
+            width: 600px;
+            height: 600px;
+            filter: blur(60px);
+            z-index: -1;
+        }
+
+        .centered-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .card {
+            background-color: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-blur-bg"></div>
+
+    <div class="centered-content">
+        <div class="p-5">
+            <div class="text-center">
+                <h1 class="h4 text-gray-200 mb-4">Create an Account</h1>
+            </div>
+            <form class="user">
+                <div class="alert alert-warning" id="creatingwallet" style="display: none;">Creating wallet....</div>
+                <div class="form-group">
+                    <a id="generateWalletButton" class="btn btn-primary btn-user btn-block">
+                        Generate address
+                    </a>
+                </div>
+                <div class="form-group row" style="display: none;" id="new_address_generated">
+                    <h3 class="h4 text-gray-200 mb-4">Save this data and try to login with a new password</h1>
+                        
+                    <div class="col-sm-12 mb-6 mb-sm-0">
+                        <input type="hidden" id="hidden_new_wallet_address" />
+                        <input type="hidden" id="hidden_new_wallet_secret" />
+                        Address: <b><span id="aeAccount"></span></b> <br />
+                        Private Key: <b><span id="aePrivateKey"></span></b> <br />
+                    </div>
+                    <div class="col-sm-12 mb-6 mb-sm-0">
+                        Request some AE from the faucet: <a href="https://faucet.aepps.com/" target="_blank" class="btn btn-success btn-user btn-block" style="background-color: #666666; border-color:#666666">Faucet</a>
+                    </div>
+                    <div style="padding-bottom: 23px;"class="col-sm-12 mb-6 mb-sm-0">
+                        Create a password for your wallet: 
+                        <input type="password" id="passwordRegisterAccount" class="form-control" />
+                        <a id="saveWallet" class="btn btn-secondary btn-user btn-block" style="background-color: #666666;">Save wallet and login</a>
+                    </div>
+                </div>                
+                <hr>
+            </form>
+            <hr>
+            <div class="text-center">
+                <a class="small" href="login.html">Already have an account? Login!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        var isAuthenticated = localStorage.getItem('aeWalletAddress');
+        if(isAuthenticated != null) {
+            location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
