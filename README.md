@@ -1,5 +1,8 @@
 #CHAEN_COLLECTIVE-AETERNITY
 
+The following ppt link gives a deeper insight to our vision about our project-
+https://docs.google.com/presentation/d/1uHjizUV9KIZ05V1sDMkvnGQzADEvVfeYUR1pQ2_S6Y0/edit?usp=sharing
+
 CHAEN COLLECTIVE empowers users in the efficient management of investment clubs, opening up access to participation in investment funds. Operating on a decentralized and agile platform, it offers various functionalities for individuals involved in these investment clubs:
 
 Club Creation:
